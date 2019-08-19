@@ -26,14 +26,14 @@ const fetchHumidity = () => {
     })
 }
 
-// fetchTemperature();
-// fetchHumidity();
+fetchTemperature();
+fetchHumidity();
 /*
 Call the above defined functions at regular intervals
 */
-setInterval(() => {
-  fetchTemperature()
-  fetchHumidity()
-}, 2000)
+// setInterval(() => {
+//   fetchTemperature()
+//   fetchHumidity()
+// }, 2000)
 
 console.log('main.js done')
