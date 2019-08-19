@@ -6,7 +6,7 @@ app.get('/temperature', (req, res) => {
   
   getSensorReadings((err, temperature, humidity) => {
     if (!err) {
-      res.send(temperature + '°C');
+      res.send(temperature.toFixed(1) + '°C');
     }
   })
 

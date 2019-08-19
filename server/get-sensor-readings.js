@@ -11,10 +11,11 @@ const getSensorReadings = (callback) => {
 
   console.log('getSenorReadings..');
   sensor.read(sensorType, pin, function (err, temperature, humidity) {
-    if (!err) {
+    if (err) {
       /*
       If there is an error, call the callback function with the error as its first argument
       */
+      console.log(err);
       return callback(err)
     }
 
