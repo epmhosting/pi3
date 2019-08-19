@@ -24,4 +24,5 @@ const getSensorReadings = (callback) => {
   })
 }
 
+console.log('getSensorReadings.js done.')
 module.exports = getSensorReadings
