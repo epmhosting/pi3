@@ -13,7 +13,7 @@ app.get('/temperature', (req, res) => {
   
   getSensorReadings((err, temperature, humidity) => {
     if (!err) {
-      res.send('<strong>' + temperature.toFixed(1) + '</strong>' + '°C');
+      res.send(temperature.toFixed(1));
       // res.send(temperature.toFixed(1) + '°C');
     }
   })
@@ -26,7 +26,7 @@ app.get('/humidity', (req, res) => {
   
   getSensorReadings((err, temperature, humidity) => {
     if (!err) {
-      res.send('<strong>' + humidity.toFixed(1) + '</strong>'+ '%');
+      res.send(humidity.toFixed(1));
     }
   })
 
