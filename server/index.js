@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const getSensorReadings = require('./get-sensor-readings');
+
+
+app.get('/file', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+})
 
 app.get('/temperature', (req, res) => {
   
