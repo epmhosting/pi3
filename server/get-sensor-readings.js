@@ -9,7 +9,7 @@ This function is also asynchronous. It accepts a callback function as an argumen
 */
 const getSensorReadings = (callback) => {
 
-  console.log('getSenorReadings..');
+  console.log('getSensorReadings..');
   sensor.read(sensorType, pin, function (err, temperature, humidity) {
     if (err) {
       /*
