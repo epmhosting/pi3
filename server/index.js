@@ -26,7 +26,7 @@ app.get('/humidity', (req, res) => {
   
   getSensorReadings((err, temperature, humidity) => {
     if (!err) {
-      res.send(humidity.toFixed(1) + '%');
+      res.send('<strong>' + humidity.toFixed(1) + '</strong>'+ '%');
     }
   })
 
