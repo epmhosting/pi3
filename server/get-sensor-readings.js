@@ -8,6 +8,8 @@ We abstract away the functionality to read sensor information inside the getSens
 This function is also asynchronous. It accepts a callback function as an argument.
 */
 const getSensorReadings = (callback) => {
+
+  console.log('getSenorReadings..');
   sensor.read(sensorType, pin, function (err, temperature, humidity) {
     if (!err) {
       /*
@@ -20,6 +22,8 @@ const getSensorReadings = (callback) => {
     If everything went well, call the callback with "null" as the first argument to indicate thet there was no error.
     The second and third arguments would be the results (temperature and humidty respectively)
     */
+    console.log(temperature);
+    console.log(humidity);
     callback(null, temperature, humidity)
   })
 }
